@@ -59,4 +59,4 @@ if __name__ == '__main__':
 
     print("\t", "wb", "=", w[2])
 
-    print("epocas: ", epoca)
+    print("épocas: ", epoca)
