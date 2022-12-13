@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>454</width>
-    <height>283</height>
+    <height>338</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,11 +29,6 @@
         <item>
          <property name="text">
           <string>Corte Simples</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Corte Duplo</string>
          </property>
         </item>
         <item>
@@ -90,7 +85,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="daddyLineEdit">
+          <widget class="QLineEdit" name="fatherLineEdit">
            <property name="inputMask">
             <string>BBBBBBBBBB</string>
            </property>
@@ -122,7 +117,7 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
            <item>
-            <widget class="QLabel" name="filhao1Label1">
+            <widget class="QLabel" name="son1Label1">
              <property name="text">
               <string/>
              </property>
@@ -132,14 +127,14 @@
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="filhao1Label2">
+            <widget class="QLabel" name="son1Label2">
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="filhao1Label3">
+            <widget class="QLabel" name="son1Label3">
              <property name="text">
               <string/>
              </property>
@@ -182,7 +177,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="mammyLineEdit">
+          <widget class="QLineEdit" name="motherLineEdit">
            <property name="inputMask">
             <string>BBBBBBBBBB</string>
            </property>
@@ -211,7 +206,7 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_4">
            <item>
-            <widget class="QLabel" name="filhao2Label1">
+            <widget class="QLabel" name="son2Label1">
              <property name="text">
               <string/>
              </property>
@@ -221,7 +216,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="filhao2Label2">
+            <widget class="QLabel" name="son2Label2">
              <property name="text">
               <string/>
              </property>
@@ -231,7 +226,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="filhao2Label3">
+            <widget class="QLabel" name="son2Label3">
              <property name="text">
               <string/>
              </property>
@@ -272,7 +267,7 @@
      <x>0</x>
      <y>0</y>
      <width>454</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

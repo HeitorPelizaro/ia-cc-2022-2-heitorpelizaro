@@ -23,13 +23,13 @@ def on_cross_pushbutton_clicked():
 
 
 def on_method_combobox_current_text_changed():
-    pmx = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+    pmx = ['A','B','C','D','E','F','G','H','I','J']
 
     if method_combo_box.currentText() == "Corte Simples":
         father_line_edit.setInputMask('BBBBBBBBBB')
         father_line_edit.setText('0000000000')
         mother_line_edit.setInputMask('BBBBBBBBBB')
-        mother_line_edit.setText('1111111111')
+        mother_line_edit.setText('0000000000')
     else:
         father_line_edit.setInputMask('AAAAAAAAAA')
         random.shuffle(pmx)
@@ -37,7 +37,7 @@ def on_method_combobox_current_text_changed():
         mother_line_edit.setInputMask('AAAAAAAAAA')
         random.shuffle(pmx)
         mother_line_edit.setText(''.join(pmx))
-
+    #print('combo box changed')
 
 def pmx_crossover():
     # Esta função está retornando 6 valores.
@@ -46,14 +46,15 @@ def pmx_crossover():
 
     father_original = father_line_edit.text()
     father_list = list(father_original)
+
     mother_original = mother_line_edit.text()
     mother_list = list(mother_original)
 
-    cut_points = [random.randint(1, len(father_list) - 1)]
-    cut_point = random.randint(1, len(father_list) - 1)
+    cut_points = [random.randint(1, len(father_list)-1)]
+    cut_point = random.randint(1, len(father_list)-1)
 
     while cut_points.__contains__(cut_point):
-        cut_point = random.randint(1, len(father_list) - 1)
+        cut_point = random.randint(1, len(father_list)-1)
 
     if cut_point > cut_points[0]:
         cut_points.append(cut_point)
@@ -61,19 +62,19 @@ def pmx_crossover():
         cut_points.append(cut_points[0])
         cut_points[0] = cut_point
 
-
     d_mother = {}
     d_father = {}
+
     for i in range(len(father_list)):
-        if cut_points[0] <= i < cut_points[1]:
+        if cut_points[0] <=  i < cut_points[1]:
             d_father.update({father_list[i]: mother_list[i]})
             d_mother.update({mother_list[i]: father_list[i]})
 
-    aux_d_father = dict(d_father)
+    aux_d_father = dict (d_father)
     for k, v in aux_d_father.items():
         if d_mother.__contains__(k):
-            d_father.update({d_mother[k]: v})
-            d_mother.update({v: d_mother[k]})
+            d_father.update({d_mother[k]:v})
+            d_mother.update({v:d_mother[k]})
             del d_father[k]
             del d_mother[k]
 
@@ -86,20 +87,26 @@ def pmx_crossover():
     mother = ''.join(mother_list)
     father = ''.join(father_list)
 
-    return father[:cut_points[0]], \
-            mother_original[cut_points[0]:cut_points[1]], \
-            father[cut_points[1]:], \
-            mother[:cut_points[0]], \
-            father_original[cut_points[0]:cut_points[1]], \
-            mother[cut_points[1]:]
+    return father[:cut_points[0]],\
+           mother_original[cut_points[0]:cut_points[1]], \
+           father[cut_points[1]:], \
+           mother[:cut_points[0]], \
+           father_original[cut_points[0]:cut_points[1]], \
+           mother[cut_points[1]:]
+    #return '','','','','',''
 
 
 def simple_cut_crossover():
-    father = father_line_edit.text()
-    mother = mother_line_edit.text()
+
+    father = father_line_edit.text();
+    mother = mother_line_edit.text();
     cut_point = random.randint(0, len(father))
 
     return father[:cut_point], mother[cut_point:], '', mother[:cut_point], father[cut_point:], ''
+
+
+    #return '','','','','',''
+
 
 if __name__ == "__main__":
     QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_ShareOpenGLContexts)
