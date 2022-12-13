@@ -6,246 +6,272 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>472</width>
-    <height>325</height>
+    <width>559</width>
+    <height>542</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPlainTextEdit" name="trainPlainTextEdit">
+   <widget class="QLabel" name="aprendizado">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>60</y>
-      <width>191</width>
-      <height>141</height>
+      <y>10</y>
+      <width>81</width>
+      <height>31</height>
      </rect>
     </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;xi b s&lt;/p&gt;&lt;p&gt;α&lt;/p&gt;&lt;p&gt;θ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <property name="text">
+     <string>Aprendizado :</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="testLineEdit">
+   <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>307</x>
-      <y>80</y>
-      <width>113</width>
-      <height>25</height>
+      <x>90</x>
+      <y>10</y>
+      <width>84</width>
+      <height>71</height>
      </rect>
     </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;xi b&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QRadioButton" name="hebb">
+       <property name="text">
+        <string>Hebb</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="percep">
+       <property name="text">
+        <string>Perceptron</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QLabel" name="trainLabel">
+   <widget class="QLabel" name="treinamento">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>91</width>
-      <height>17</height>
+      <x>20</x>
+      <y>100</y>
+      <width>171</width>
+      <height>16</height>
      </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>67</width>
-      <height>0</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <weight>50</weight>
-      <bold>false</bold>
-      <strikeout>false</strikeout>
-     </font>
     </property>
     <property name="text">
      <string>Treinamento</string>
     </property>
    </widget>
-   <widget class="QLabel" name="testLabel">
+   <widget class="QPushButton" name="treinar_but">
     <property name="geometry">
      <rect>
-      <x>307</x>
-      <y>60</y>
-      <width>41</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Teste</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="saidaLabel">
-    <property name="geometry">
-     <rect>
-      <x>307</x>
-      <y>110</y>
-      <width>41</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Saida:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="respostaLabel">
-    <property name="geometry">
-     <rect>
-      <x>357</x>
-      <y>110</y>
-      <width>41</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="testLabel_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>203</y>
-      <width>67</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pesos</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="trainPushButton">
-    <property name="geometry">
-     <rect>
-      <x>228</x>
-      <y>60</y>
-      <width>61</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Executar</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="testPushButton">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>60</y>
-      <width>71</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Executar 2</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="hebbRadioButton">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>62</width>
+      <x>30</x>
+      <y>330</y>
+      <width>321</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>Hebb</string>
+     <string>Treinar</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="perceptronRadioButton">
+   <widget class="QLabel" name="pesos_label">
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>10</y>
-      <width>98</width>
+      <y>380</y>
+      <width>41</width>
+      <height>99</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pesos : </string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>380</y>
+      <width>51</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="peso1">
+       <property name="text">
+        <string>w1 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="peso2">
+       <property name="text">
+        <string>w2 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="pesobaias">
+       <property name="text">
+        <string>wb = 0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="rodando">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>40</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rodando :</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>50</y>
+      <width>160</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="dados">
+       <property name="text">
+        <string>Dados : </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="dado1">
+       <property name="minimum">
+        <number>-1</number>
+       </property>
+       <property name="maximum">
+        <number>1</number>
+       </property>
+       <property name="singleStep">
+        <number>2</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="dado2">
+       <property name="minimum">
+        <number>-1</number>
+       </property>
+       <property name="maximum">
+        <number>1</number>
+       </property>
+       <property name="singleStep">
+        <number>2</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="testar">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>190</y>
+      <width>75</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>Perceptron</string>
+     <string>Testar</string>
     </property>
    </widget>
-   <widget class="QLabel" name="weight1Label">
+   <widget class="QLabel" name="resultado">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>233</y>
-      <width>31</width>
-      <height>16</height>
+      <x>360</x>
+      <y>220</y>
+      <width>161</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>W1:</string>
+     <string>Resultado : </string>
     </property>
    </widget>
-   <widget class="QLabel" name="weight2Label">
+   <widget class="QLabel" name="inputs_t">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>251</y>
-      <width>31</width>
-      <height>16</height>
+      <x>50</x>
+      <y>120</y>
+      <width>88</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string>W2:</string>
+     <string>Input :</string>
     </property>
    </widget>
-   <widget class="QLabel" name="weightBLabel">
+   <widget class="QLabel" name="Input_value">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>270</y>
-      <width>31</width>
-      <height>16</height>
+      <x>110</x>
+      <y>130</y>
+      <width>271</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>Wb:</string>
+     <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QLabel" name="p1Label">
+   <widget class="QLabel" name="outputs">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>233</y>
+      <x>40</x>
+      <y>180</y>
       <width>71</width>
-      <height>16</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Outputs:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="p2Label">
+   <widget class="QLabel" name="outpu_values">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>251</y>
-      <width>71</width>
-      <height>16</height>
+      <x>110</x>
+      <y>190</y>
+      <width>369</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QLabel" name="pBLabel">
+   <widget class="QLabel" name="epoca">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>270</y>
-      <width>71</width>
-      <height>16</height>
+      <x>240</x>
+      <y>410</y>
+      <width>91</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Epocas = </string>
     </property>
    </widget>
   </widget>
@@ -254,7 +280,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>472</width>
+     <width>559</width>
      <height>21</height>
     </rect>
    </property>
